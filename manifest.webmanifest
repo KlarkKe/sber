@@ -1,0 +1,12 @@
+{
+  "name": "SBER",
+  "short_name": "SBER",
+  "id": "com.example.lanerunner3dpremium",
+  "description": "",
+  "orientation": "portrait",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
