@@ -1,54 +1,111 @@
-gdjs.PreloaderCode = {};
-gdjs.PreloaderCode.localVariables = [];
-gdjs.PreloaderCode.GDNewSpriteObjects1= [];
-gdjs.PreloaderCode.GDNewSpriteObjects2= [];
-gdjs.PreloaderCode.GDProgressBarkaObjects1= [];
-gdjs.PreloaderCode.GDProgressBarkaObjects2= [];
+gdjs.StartSceneCode = {};
+gdjs.StartSceneCode.localVariables = [];
+gdjs.StartSceneCode.GDNewSpriteObjects1= [];
+gdjs.StartSceneCode.GDNewSpriteObjects2= [];
+gdjs.StartSceneCode.GDNewSprite2Objects1= [];
+gdjs.StartSceneCode.GDNewSprite2Objects2= [];
+gdjs.StartSceneCode.GDroolbuttonObjects1= [];
+gdjs.StartSceneCode.GDroolbuttonObjects2= [];
+gdjs.StartSceneCode.GDleaderboardButtonObjects1= [];
+gdjs.StartSceneCode.GDleaderboardButtonObjects2= [];
 
 
-gdjs.PreloaderCode.eventsList0 = function(runtimeScene) {
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("ProgressBarka"), gdjs.PreloaderCode.GDProgressBarkaObjects1);
-{runtimeScene.getGame().getVariables().getFromIndex(16).setNumber(0);
-}{for(var i = 0, len = gdjs.PreloaderCode.GDProgressBarkaObjects1.length ;i < len;++i) {
-    gdjs.PreloaderCode.GDProgressBarkaObjects1[i].getBehavior("Resizable").setWidth(0);
-}
-}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "LoaderTimer");
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-{
-{runtimeScene.getGame().getVariables().getFromIndex(16).setNumber(runtimeScene.getGame().getVariables().getFromIndex(16).getAsNumber() + gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene));
-}}
-
-}
-
+gdjs.StartSceneCode.mapOfGDgdjs_9546StartSceneCode_9546GDNewSprite2Objects1Objects = Hashtable.newFrom({"NewSprite2": gdjs.StartSceneCode.GDNewSprite2Objects1});
+gdjs.StartSceneCode.eventsList0 = function(runtimeScene) {
 
 {
 
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(16)) <= 7;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("ProgressBarka"), gdjs.PreloaderCode.GDProgressBarkaObjects1);
-{for(var i = 0, len = gdjs.PreloaderCode.GDProgressBarkaObjects1.length ;i < len;++i) {
-    gdjs.PreloaderCode.GDProgressBarkaObjects1[i].getBehavior("Resizable").setWidth(runtimeScene.getGame().getVariables().getFromIndex(16).getAsNumber() / 7 * 301);
-}
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "GameScene", false);
 }}
+
+}
+
+
+};gdjs.StartSceneCode.mapOfGDgdjs_9546StartSceneCode_9546GDroolbuttonObjects1Objects = Hashtable.newFrom({"roolbutton": gdjs.StartSceneCode.GDroolbuttonObjects1});
+gdjs.StartSceneCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.playSound(runtimeScene, "", false, 100, 1);
+}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "RoolScreen", false);
+}}
+
+}
+
+
+};gdjs.StartSceneCode.mapOfGDgdjs_9546StartSceneCode_9546GDleaderboardButtonObjects1Objects = Hashtable.newFrom({"leaderboardButton": gdjs.StartSceneCode.GDleaderboardButtonObjects1});
+gdjs.StartSceneCode.eventsList2 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.playSound(runtimeScene, "", false, 100, 1);
+}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "LeaderBoardScreen", false);
+}}
+
+}
+
+
+};gdjs.StartSceneCode.eventsList3 = function(runtimeScene) {
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("NewSprite2"), gdjs.StartSceneCode.GDNewSprite2Objects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.StartSceneCode.mapOfGDgdjs_9546StartSceneCode_9546GDNewSprite2Objects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+
+{ //Subevents
+gdjs.StartSceneCode.eventsList0(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("roolbutton"), gdjs.StartSceneCode.GDroolbuttonObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.StartSceneCode.mapOfGDgdjs_9546StartSceneCode_9546GDroolbuttonObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+
+{ //Subevents
+gdjs.StartSceneCode.eventsList1(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("leaderboardButton"), gdjs.StartSceneCode.GDleaderboardButtonObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.StartSceneCode.mapOfGDgdjs_9546StartSceneCode_9546GDleaderboardButtonObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+
+{ //Subevents
+gdjs.StartSceneCode.eventsList2(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -57,34 +114,39 @@ gdjs.copyArray(runtimeScene.getObjects("ProgressBarka"), gdjs.PreloaderCode.GDPr
 
 
 let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "LoaderTimer") > 7;
-if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "StartScene", false);
-}}
+{
+}
 
 }
 
 
 };
 
-gdjs.PreloaderCode.func = function(runtimeScene) {
+gdjs.StartSceneCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs.PreloaderCode.GDNewSpriteObjects1.length = 0;
-gdjs.PreloaderCode.GDNewSpriteObjects2.length = 0;
-gdjs.PreloaderCode.GDProgressBarkaObjects1.length = 0;
-gdjs.PreloaderCode.GDProgressBarkaObjects2.length = 0;
+gdjs.StartSceneCode.GDNewSpriteObjects1.length = 0;
+gdjs.StartSceneCode.GDNewSpriteObjects2.length = 0;
+gdjs.StartSceneCode.GDNewSprite2Objects1.length = 0;
+gdjs.StartSceneCode.GDNewSprite2Objects2.length = 0;
+gdjs.StartSceneCode.GDroolbuttonObjects1.length = 0;
+gdjs.StartSceneCode.GDroolbuttonObjects2.length = 0;
+gdjs.StartSceneCode.GDleaderboardButtonObjects1.length = 0;
+gdjs.StartSceneCode.GDleaderboardButtonObjects2.length = 0;
 
-gdjs.PreloaderCode.eventsList0(runtimeScene);
-gdjs.PreloaderCode.GDNewSpriteObjects1.length = 0;
-gdjs.PreloaderCode.GDNewSpriteObjects2.length = 0;
-gdjs.PreloaderCode.GDProgressBarkaObjects1.length = 0;
-gdjs.PreloaderCode.GDProgressBarkaObjects2.length = 0;
+gdjs.StartSceneCode.eventsList3(runtimeScene);
+gdjs.StartSceneCode.GDNewSpriteObjects1.length = 0;
+gdjs.StartSceneCode.GDNewSpriteObjects2.length = 0;
+gdjs.StartSceneCode.GDNewSprite2Objects1.length = 0;
+gdjs.StartSceneCode.GDNewSprite2Objects2.length = 0;
+gdjs.StartSceneCode.GDroolbuttonObjects1.length = 0;
+gdjs.StartSceneCode.GDroolbuttonObjects2.length = 0;
+gdjs.StartSceneCode.GDleaderboardButtonObjects1.length = 0;
+gdjs.StartSceneCode.GDleaderboardButtonObjects2.length = 0;
 
 
 return;
 
 }
 
-gdjs['PreloaderCode'] = gdjs.PreloaderCode;
+gdjs['StartSceneCode'] = gdjs.StartSceneCode;

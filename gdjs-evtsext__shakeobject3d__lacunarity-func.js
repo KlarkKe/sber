@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__ShakeObject3D__Lacunarity !== "undefined") {
 gdjs.evtsExt__ShakeObject3D__Lacunarity = {};
 
 
-gdjs.evtsExt__ShakeObject3D__Lacunarity.userFunc0x836ab8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__ShakeObject3D__Lacunarity.userFunc0xa8ebb0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const name = eventsFunctionContext.getArgument("Name");
 
@@ -19,7 +19,7 @@ gdjs.evtsExt__ShakeObject3D__Lacunarity.eventsList0 = function(runtimeScene, eve
 {
 
 
-gdjs.evtsExt__ShakeObject3D__Lacunarity.userFunc0x836ab8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__ShakeObject3D__Lacunarity.userFunc0xa8ebb0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
